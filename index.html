@@ -135,12 +135,15 @@
     <script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
     <script src="vendor/countdowntime/countdowntime.js"></script>
     <script>
+      const startDate = new Date(Date.now());
+      const endDate = "2020-02-14";
+      const diff = new Date(endDate) - new Date(startDate);
       $(".cd100").countdown100({
         /*Set Endtime here*/
         /*Endtime must be > current time*/
         endtimeYear: 0,
         endtimeMonth: 0,
-        endtimeDate: 35,
+        endtimeDate: diff / (1000 * 60 * 60 * 24),
         endtimeHours: 18,
         endtimeMinutes: 0,
         endtimeSeconds: 0,
